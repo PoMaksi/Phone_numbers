@@ -6,7 +6,5 @@ import ru.codemika.number.model.Active;
 import java.util.Optional;
 
 public interface ActiveRepo extends JpaRepository<Active, Integer> {
-
-
-    Optional<Number> findByUrl(String url);
+    Optional<Active> findByUrl(String url);
 }

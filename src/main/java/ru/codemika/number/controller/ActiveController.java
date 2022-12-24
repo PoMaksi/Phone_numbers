@@ -9,14 +9,9 @@ import ru.codemika.number.service.ActiveService;
 @RequiredArgsConstructor
 
 
-public class UrlController {
+public class ActiveController {
     private final ActiveService service;
-
-
-
     @GetMapping("{url}")
     public String goToURL(@PathVariable String url){return service.goToUrl(url);
     }
-
-
 }

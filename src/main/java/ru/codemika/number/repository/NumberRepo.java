@@ -8,6 +8,4 @@ import java.util.List;
 
 public interface NumberRepo extends JpaRepository<Number,  Number> {
     List<Number> findAllByNumberOrUrl(String number, String url);
-
-//    Optional<Number> findByUrl(String url);
 }

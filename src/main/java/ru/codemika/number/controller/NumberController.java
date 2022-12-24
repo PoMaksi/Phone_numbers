@@ -28,7 +28,6 @@ public class NumberController {
         return service.getList();
     }
 
-
     @GetMapping("search")
     public NumberResponse getNumberByNumberOrUrl(@RequestBody NumberSearchRequest  numberSearchRequest) {
         String text = numberSearchRequest.getText();
@@ -36,39 +35,10 @@ public class NumberController {
                 text,
                 service.getNumberByNumberOrUrl(text, text));
     }
-
-//    @GetMapping("{url}")
-//    public String goToURL(@PathVariable String url){
-//        return service.goToURL(url);
-//    }
-
-
-//    @PutMapping
-//    public Number active(Principal principal, @RequestBody Number url){
-//        return service.active(principal, url);
-//    }
-//TODO//
-
-//    public static class NumberResponse {
-//        String search;
-//        List<Number> number;
-//
-//        public NumberResponse(String search, List<Number> number){
-//            this.search = search;
-//            this.number = number;
-//        }
-//    }
     public static class NumberSearchRequest {
         String text;
-
         public String getText() {
             return text;
         }
-
-        public void setText(String text) {
-            this.text = text;
-        }
     }
-
-
 }

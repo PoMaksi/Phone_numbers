@@ -2,7 +2,6 @@ package ru.codemika.number.service;
 
 
 import lombok.RequiredArgsConstructor;
-
 import net.bytebuddy.utility.RandomString;
 import org.springframework.stereotype.Service;
 import ru.codemika.number.request.NumberRequest;
@@ -27,8 +26,6 @@ public class NumberService {
         return repo.save(number);
     }
 
-
-
     public List<Number> getList(){
         return repo.findAll();
     }
@@ -36,5 +33,4 @@ public class NumberService {
     public List<Number> getNumberByNumberOrUrl(String number, String url){
         return repo.findAllByNumberOrUrl(number, url);
     }
-
 }
