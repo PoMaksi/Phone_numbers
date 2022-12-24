@@ -1,0 +1,28 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://rc1b-0ckq9oilrgugcaer.mdb.yandexcloud.net:6432/sonet
+    username: grushenkov
+    password: scoKEywcu7
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  show-sql: true
+
+keycloak:
+  realm: sonet
+  auth-server-url: http://localhost:8080
+  ssl-required: external
+  resource: admin-cli
+  credentials:
+    secret: DUkFVWAjql2wp5RtPGPoMfdwIaLZx6t6
+  use-resource-role-mappings: true
+  bearer-only: true
+
+server:
+  port: 9000
