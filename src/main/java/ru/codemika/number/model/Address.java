@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ru.codemika.number.repository.AddressRepo;
-
 import javax.persistence.*;
-import java.util.Set;
 
 
 @Entity
@@ -21,15 +19,12 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @OneToMany
-    private String RealUrl;
-    private Set<Active> actives;
+    private String RealUrl = "https://yes";
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name ="address")
+    private Active Real;
     @OneToMany
 
     private final AddressRepo repo;
-
-    public Address create(Address address) {
-    address.setRealUrl("https://yes");
-        return repo.save(address);
-    }
 }
 

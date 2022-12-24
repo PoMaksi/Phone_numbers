@@ -1,6 +1,7 @@
 package ru.codemika.number.service;
 
-
+import lombok.Getter;
+import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.codemika.number.model.Active;
@@ -23,7 +24,7 @@ public class ActiveService {
         if (active.getAct() != null) return "go out";
 
         active.setAct(LocalDateTime.now());
-        return repo.save(active).getRealUrl();
-    }
+        return repo.save(active).toString().getReal();
 
+    }
 }

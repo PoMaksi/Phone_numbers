@@ -3,7 +3,7 @@ package ru.codemika.number.model;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-
+import java.time.LocalDateTime;
 import javax.persistence.*;
 
 @Entity
@@ -24,6 +24,6 @@ public class Active {
     @OneToOne
     private Number url;
     @ManyToOne
-    private Address RealUrl;
-    private String Act;
+    private Address Real;
+    private LocalDateTime Act;
 }
