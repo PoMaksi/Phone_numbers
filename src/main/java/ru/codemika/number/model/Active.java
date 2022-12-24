@@ -7,17 +7,19 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "urls")
+@Table(name = "Active")
 @Getter
 @Setter
 @RequiredArgsConstructor
 
-public class Url {
+public class Active {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
+    @OneToOne (mappedBy = "active", cascade = {
+            CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH
+    })
     private Number number;
     @OneToOne
     private Number url;

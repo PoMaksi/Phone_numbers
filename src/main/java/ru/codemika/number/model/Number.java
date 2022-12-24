@@ -24,7 +24,9 @@ public class Number {
     private String number;
     @OneToOne
     private RandomString url;
-    private Set<Url> urls;
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name = "activated_id")
+    private Active active;
 
 //    @OneToOne (mappedBy = "number")
 //    @OneToOne (mappedBy = "url")

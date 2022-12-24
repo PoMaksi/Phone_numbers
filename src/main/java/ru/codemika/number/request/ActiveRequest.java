@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
 @Validated
 @Getter
 @Setter
-public class UrlRequest {
+public class ActiveRequest {
 
     @NotBlank
     private String number;

@@ -2,7 +2,7 @@ package ru.codemika.number.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.codemika.number.service.UrlService;
+import ru.codemika.number.service.ActiveService;
 
 @RestController
 @RequestMapping("/api/url")
@@ -10,7 +10,7 @@ import ru.codemika.number.service.UrlService;
 
 
 public class UrlController {
-    private final UrlService service;
+    private final ActiveService service;
 
 
 

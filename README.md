@@ -11,11 +11,11 @@ Sonet
 
 `db-password= PASSWORD`
 
-`db-url= URL`
+`db-active= URL`
 
 В файле src/main/resources/application.yml указать настроки базы данных для Spring Boot приложения (отличается от БД Keycloak):
 
-`url: URL`
+`active: URL`
 
 `username: USERNAME`
 

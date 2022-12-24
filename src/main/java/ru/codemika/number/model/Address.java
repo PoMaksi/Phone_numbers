@@ -22,7 +22,7 @@ public class Address {
     private Long id;
     @OneToMany
     private String RealUrl;
-    private Set<Url> urls;
+    private Set<Active> actives;
     @OneToMany
 
     private final AddressRepo repo;
