@@ -24,7 +24,7 @@ public class ActiveService {
         if (active.getAct() != null) return "go out";
 
         active.setAct(LocalDateTime.now());
-        return repo.save(active).toString().getReal();
+        return repo.save(active).getReal();
 
     }
 }
