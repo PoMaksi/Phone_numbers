@@ -24,6 +24,8 @@ public class Active {
     @OneToOne
     private Number url;
     @ManyToOne
-    private Address Real;
+    private Address address;
+    @Column
     private LocalDateTime Act;
+
 }

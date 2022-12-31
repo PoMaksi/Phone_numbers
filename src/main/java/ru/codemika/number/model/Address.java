@@ -20,11 +20,9 @@ public class Address {
     private Long id;
     @OneToMany
     private String RealUrl = "https://yes";
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name ="address")
-    private Active Real;
-    @OneToMany
 
+    @OneToMany
     private final AddressRepo repo;
 }
+
 

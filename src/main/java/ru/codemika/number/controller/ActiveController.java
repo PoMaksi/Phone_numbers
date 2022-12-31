@@ -12,6 +12,6 @@ import ru.codemika.number.service.ActiveService;
 public class ActiveController {
     private final ActiveService service;
     @GetMapping("{url}")
-    public String goToURL(@PathVariable String url){return service.goToUrl(url);
+    public Object goToURL(@PathVariable String url){return service.goToUrl(url);
     }
 }

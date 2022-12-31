@@ -7,8 +7,6 @@ import lombok.Setter;
 import net.bytebuddy.utility.RandomString;
 
 import javax.persistence.*;
-import java.util.Set;
-
 
 @Entity
 @Table(name = "Number")
@@ -28,15 +26,8 @@ public class Number {
     @JoinColumn(name = "activated_id")
     private Active active;
 
-//    @OneToOne (mappedBy = "number")
-//    @OneToOne (mappedBy = "url")
-
-
-
     public int hashCode() {
         return getClass().hashCode();
     }
-
-
 }
 
